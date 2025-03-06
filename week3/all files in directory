@@ -1,0 +1,35 @@
+echo "enter the directory"
+read dir
+for file in "$dir"/*;do
+        echo "$file"
+done
+
+output
+---------
+
+[mca@localhost ~]$ vi files.sh
+[mca@localhost ~]$ chmod + x files.sh
+chmod: cannot access 'x': No such file or directory
+[mca@localhost ~]$ chmod +x files.sh
+[mca@localhost ~]$ ./files.sh
+enter the directory
+/home/mca/
+/home/mca//abc.txt
+/home/mca//abd.txt
+/home/mca//Desktop
+/home/mca//Documents
+/home/mca//Downloads
+/home/mca//fact.sh
+/home/mca//files.sh
+/home/mca//hi.sh
+/home/mca//multi.sh
+/home/mca//Music
+/home/mca//num.sh
+/home/mca//Pictures
+/home/mca//pqr.txt
+/home/mca//Public
+/home/mca//sumn.sh
+/home/mca//sum.sh
+/home/mca//Templates
+/home/mca//Videos
+/home/mca//xyz.txt

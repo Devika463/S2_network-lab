@@ -1,0 +1,16 @@
+current_date=$(date)
+current_user=$(whoami)
+current_directory=$(pwd)
+echo "current date and time: $current_date"
+echo "current user: $current_user"
+echo "current working directory: $current_directory"
+
+  output
+  --------
+
+[mca@localhost ~]$ vi current.sh
+[mca@localhost ~]$ chmod +x current.sh
+[mca@localhost ~]$ ./current.sh
+current date and time: Thu Mar  6 11:41:46 AM IST 2025
+current user: mca
+current working directory: /home/mca  

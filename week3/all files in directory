@@ -8,8 +8,6 @@ output
 ---------
 
 [mca@localhost ~]$ vi files.sh
-[mca@localhost ~]$ chmod + x files.sh
-chmod: cannot access 'x': No such file or directory
 [mca@localhost ~]$ chmod +x files.sh
 [mca@localhost ~]$ ./files.sh
 enter the directory

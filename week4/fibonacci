@@ -1,0 +1,24 @@
+echo "Enter the number:"
+read n
+a=0
+b=1
+echo "Fibonacci Series upto $n terms:"
+for (( i=0;i<n;i++))
+do      
+        echo -n "$a"
+        next=$((a+b))
+        a=$b
+        b=$next
+done    
+
+output
+-------
+
+[mca@localhost ~]$ vi fibo.sh
+[mca@localhost ~]$ chmod +x fibo.sh
+[mca@localhost ~]$ ./fibo.sh
+Enter the number:
+10
+Fibonacci Series upto 10 terms:
+0 1 1 2 3 5 8 13 21 34 
+

@@ -1,0 +1,20 @@
+calculate_area() {
+    local radius=$1
+    local area
+    area=$(echo "scale=2; 3.14159 * $radius * $radius" | bc)
+    echo "The area of the circle with radius $radius is: $area"
+}
+echo "Enter the radius of the circle:"
+read radius
+calculate_area "$radius"
+
+
+output
+--------
+
+[mca@localhost ~]$ vi area.sh
+[mca@localhost ~]$ chmod +x area.sh
+[mca@localhost ~]$ ./area.sh
+Enter the radius of the circle:
+5
+The area of the circle with radius 5 is: 78.53975

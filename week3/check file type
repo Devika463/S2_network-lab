@@ -1,0 +1,29 @@
+
+FILE="file.sh"
+file_type=$(file -b "$FILE")
+case "$file_type" in
+        *text*)
+                echo "This file is a text file."
+                ;;
+        *directory*)
+                echo "This file is a directory."
+                ;;
+        *executable*)
+                echo "This file is a executable."
+                ;;
+        *symlink*)
+                echo "This file is a symbolic file."
+                ;;
+        *)
+                echo "Unknown file type: $file_type"
+                ;;
+esac
+
+
+output
+--------
+
+[mca@localhost ~]$ vi file.sh
+[mca@localhost ~]$ chmod +x file.sh
+[mca@localhost ~]$ ./file.sh
+This file is a text file.

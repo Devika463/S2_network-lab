@@ -1,0 +1,25 @@
+is_palindrome(){
+        str=$1
+        reversed_str=$(echo $str | rev)
+        if [ "$str" == "$reversed_str" ]; then
+                echo "The string '$str' IS a palindrome"
+        else
+                echo "The string '$str' IS NOT  a palindrome"
+        fi
+}
+read -p "Enter a string:" input_str
+is_palindrome $input_str
+
+
+output
+--------
+
+[mca@localhost ~]$ vi palindrome.sh
+[mca@localhost ~]$ chmod +x palindrome.sh
+[mca@localhost ~]$ ./palindrome.sh
+Enter a string:malayalam
+The string 'malayalam' IS a palindrome
+[mca@localhost ~]$ chmod +x palindrome.sh
+[mca@localhost ~]$ ./palindrome.sh
+Enter a string:hello
+The string 'hello' IS NOT  a palindrome

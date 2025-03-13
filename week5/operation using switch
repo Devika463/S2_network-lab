@@ -1,0 +1,47 @@
+
+echo "Enter the first number: "
+read num1
+echo "Enter the operator (+, -, *, /): "
+read operator
+echo "Enter the second number: "
+read num2
+case $operator in
+    +)
+        result=$(echo "$num1 + $num2" | bc)
+        echo "The result of $num1 $operator $num2 is: $result"
+        ;;
+    -)
+        result=$(echo "$num1 - $num2" | bc)
+        echo "The result of $num1 $operator $num2 is: $result"
+        ;;
+    \*)
+        result=$(echo "$num1 * $num2" | bc)
+        echo "The result of $num1 $operator $num2 is: $result"
+        ;;
+    /)
+        # Check if the second number is zero to avoid division by zero
+        if [ $num2 -eq 0 ]; then
+            echo "Error: Division by zero is not allowed."
+        else
+            result=$(echo "$num1 / $num2" | bc)
+            echo "The result of $num1 $operator $num2 is: $result"
+        fi
+        ;;
+    *)
+        echo "Invalid operator. Please use +, -, *, or /."
+        ;;
+esac
+
+output
+--------
+
+[mca@localhost ~]$ vi operation.sh
+[mca@localhost ~]$ chmod +x operation.sh
+[mca@localhost ~]$ ./operation.sh
+Enter the first number: 
+10
+Enter the operator (+, -, *, /): 
++
+Enter the second number: 
+6
+The result of 10 + 6 is: 16

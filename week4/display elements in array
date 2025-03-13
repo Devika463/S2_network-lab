@@ -1,5 +1,5 @@
 
-echo "Enter the elements of the array sepaarted by spaces:"
+echo "Enter the elements of the array separated by spaces:"
 read -a array
 echo "The elements in the array are:"
 for element in "${array[@]}"
@@ -12,10 +12,8 @@ done
 
   [mca@localhost ~]$ vi elements.sh
 [mca@localhost ~]$ chmod +x elements.sh
-[mca@localhost ~]$ ./ elements.sh
-bash: ./: Is a directory
 [mca@localhost ~]$ ./elements.sh
-Enter the elements of the array sepaarted by spaces:
+Enter the elements of the array separated by spaces:
 1 2 hello 9
 The elements in the array are:
 1

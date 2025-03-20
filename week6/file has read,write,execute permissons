@@ -1,0 +1,38 @@
+echo "Enter the file name:"
+read file
+if [ -r $file ]
+then
+        echo " $file has readable permission"
+else
+        echo " $file has no readable permission"
+fi
+if [ -w $file ]
+then
+        echo " $file has writeable permission"
+else
+        echo " $file has no writeable permission"
+fi
+if [ -x $file ]
+then
+        echo " $file has executable permission"
+else
+        echo " $file has no executable permission"
+fi
+
+output
+--------
+
+[mca@localhost ~]$ vi permission.sh
+[mca@localhost ~]$ chmod +x permission.sh
+[mca@localhost ~]$ ./permission.sh
+Enter the file name:
+home
+ home has no readable permission
+ home has no writeable permission
+ home has no executable permission
+[mca@localhost ~]$ ./permission.sh
+Enter the file name:
+Desktop
+ Desktop has readable permission
+ Desktop has writeable permission
+ Desktop has executable permission

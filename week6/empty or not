@@ -1,0 +1,23 @@
+
+echo "Enter the file:"
+read file
+if [ -s $file ]
+then
+        echo "$file is empty"
+else
+        echo "$file is not empty"
+fi
+
+output
+-------
+
+[mca@localhost ~]$ vi empty.sh
+[mca@localhost ~]$ chmod +x empty.sh
+[mca@localhost ~]$ ./empty.sh
+Enter the file:
+abc.txt
+abc.txt is empty
+[mca@localhost ~]$ ./empty.sh
+Enter the file:
+Desktop
+Desktop is empty

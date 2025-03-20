@@ -1,0 +1,9 @@
+[ -d home/mca ] && echo "Directory" || echo "Not a directory"
+
+output
+--------
+
+[mca@localhost ~]$ vi direc.sh
+[mca@localhost ~]$ chmod +x direc.sh
+[mca@localhost ~]$ ./direc.sh
+Not a directory

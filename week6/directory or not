@@ -7,3 +7,7 @@ output
 [mca@localhost ~]$ chmod +x direc.sh
 [mca@localhost ~]$ ./direc.sh
 Not a directory
+
+or
+---
+
